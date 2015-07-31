@@ -1,0 +1,25 @@
+{
+  "name": "mercury-utils",
+  "version": "1.0.0",
+  "description": "Common JS dependencies for front end apps at Wikia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wikia/mercury-utils.git"
+  },
+  "author": "Liz Lee <liz@lizlux.net> (https://github.com/lizlux)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wikia/mercury-utils/issues"
+  },
+  "homepage": "https://github.com/Wikia/mercury-utils",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-folders": "^1.1.0",
+    "gulp-typescript": "^2.8.0"
+  }
+}

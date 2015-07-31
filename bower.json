@@ -1,0 +1,18 @@
+{
+  "name": "mercury-utils",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Wikia/mercury-utils",
+  "authors": [
+    "lizlux <liz@lizlux.net>"
+  ],
+  "description": "Common JS dependencies for front end apps at Wikia",
+  "main": "dist/utils.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
