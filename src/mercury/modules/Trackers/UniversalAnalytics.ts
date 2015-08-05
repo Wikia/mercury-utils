@@ -1,24 +1,12 @@
 /// <reference path="../../../../typings/google.analytics/ga.d.ts" />
 /// <reference path="../../../baseline/mercury.ts" />
 /// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="./trackers.d.ts" />
 
 interface TrackerOptions {
 	name: string;
 	allowLinker: boolean;
 	sampleRate: number;
-}
-
-interface GAAccount {
-	// namespace prefix for _gaq.push methods, ie. 'special'
-	prefix?: string;
-	// ie. 'UA-32129070-1'
-	id: string;
-	// sampling percentage, from 1 to 100
-	sampleRate: number;
-}
-
-interface GAAccountMap {
-	[name: string]: GAAccount;
 }
 
 module Mercury.Modules.Trackers {
@@ -41,10 +29,10 @@ module Mercury.Modules.Trackers {
 			// Use one of the domains below. If none matches, the tag will fall back to
 			// the default which is 'auto', probably good enough in edge cases.
 			var domain: string = [
-					'wikia.com', 'ffxiclopedia.org', 'jedipedia.de',
-					'marveldatabase.com', 'memory-alpha.org', 'uncyclopedia.org',
-					'websitewiki.de', 'wowwiki.com', 'yoyowiki.org'
-				].filter((domain: string) => document.location.hostname.indexOf(domain) > -1)[0];
+				'wikia.com', 'ffxiclopedia.org', 'jedipedia.de',
+				'marveldatabase.com', 'memory-alpha.org', 'uncyclopedia.org',
+				'websitewiki.de', 'wowwiki.com', 'yoyowiki.org'
+			].filter((domain: string) => document.location.hostname.indexOf(domain) > -1)[0];
 
 			this.accounts = M.prop('tracking.ua');
 
