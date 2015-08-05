@@ -24,7 +24,7 @@ gulp.task('build', folders( pathToFolder, function (folder) {
 		'!' + path.join(pathToFolder, folder, '**/*.d.ts'),
 		path.join(pathToFolder, folder, '**/*.ts')
 	])
-		.pipe(newer(path.join('dist', folder + '.js')))
+//		.pipe(newer(path.join('dist', folder + '.js')))
 		.pipe(ts(tsProjects[folder])).js
 		.pipe(concat(folder + '.js'))
 		.pipe(gulp.dest('dist'));

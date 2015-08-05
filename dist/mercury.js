@@ -206,7 +206,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path='../../../../typings/jquery/jquery.d.ts' />
+/// <reference path='../../../typings/jquery/jquery.d.ts' />
 /// <reference path='../../baseline/mercury.d.ts' />
 /// <reference path='./Trackers/Krux.ts' />
 /// <reference path='./Trackers/UniversalAnalytics.ts' />
@@ -374,7 +374,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../../../typings/jquery/jquery.d.ts" />
+/// <reference path="../../../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../utils/track.ts" />
 var Mercury;
 (function (Mercury) {
@@ -1359,7 +1359,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../../../typings/jquery/jquery.d.ts" />
+/// <reference path="../../../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../../baseline/mercury.d.ts" />
 /// <reference path="../../utils/calculation.ts" />
 /// <reference path="./Base.ts" />

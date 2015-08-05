@@ -1,4 +1,4 @@
-/// <reference path="../../../../../typings/jquery/jquery.d.ts" />
+/// <reference path="../../../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../../baseline/mercury.d.ts" />
 /// <reference path="../../utils/calculation.ts" />
 /// <reference path="./Base.ts" />
