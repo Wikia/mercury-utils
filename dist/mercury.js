@@ -1065,20 +1065,20 @@ var Mercury;
                 __extends(Perf, _super);
                 function Perf() {
                     this.tracker = Weppy.namespace('mercury');
-                    this.defaultContext = {
+                    this.context = {
                         skin: 'mercury',
                         'user-agent': window.navigator.userAgent,
                         env: M.prop('environment'),
                         url: window.location.href.split('#')[0],
-                        country: M.prop('geo.country')
+                        country: M.prop('geo.country'),
+                        logged_in: !!M.prop('userId')
                     };
                     this.tracker.setOptions({
                         host: M.prop('weppyConfig').host,
                         transport: 'url',
-                        context: this.defaultContext,
+                        context: this.context,
                         sample: M.prop('weppyConfig').samplingRate,
-                        aggregationInterval: M.prop('weppyConfig').aggregationInterval,
-                        logged_in: !!M.prop('userId')
+                        aggregationInterval: M.prop('weppyConfig').aggregationInterval
                     });
                     _super.call(this);
                 }
@@ -1091,10 +1091,10 @@ var Mercury;
                         trackFn = this.tracker.into(params.module);
                     }
                     // always set the current URL as part of the context
-                    this.defaultContext.url = window.location.href.split('#')[0];
+                    this.context.url = window.location.href.split('#')[0];
                     // update context in Weppy with new URL and any explicitly passed overrides for context
                     trackFn.setOptions({
-                        context: $.extend(params.context, this.defaultContext)
+                        context: $.extend(params.context, this.context)
                     });
                     switch (params.type) {
                         case 'count':
