@@ -29,6 +29,7 @@ var Mercury;
 /// <reference path="../../../../typings/google.analytics/ga.d.ts" />
 /// <reference path="../../../baseline/mercury.ts" />
 /// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="./trackers.d.ts" />
 var Mercury;
 (function (Mercury) {
     var Modules;
