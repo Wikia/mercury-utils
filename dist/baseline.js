@@ -7,11 +7,7 @@ var Mercury;
     (function (Utils) {
         function isPrimitive(val) {
             var typeOf = typeof val;
-            return (val === null) ||
-                (typeOf === 'string') ||
-                (typeOf === 'number') ||
-                (typeOf === 'boolean') ||
-                (typeOf === 'undefined');
+            return (val === null) || (typeOf === 'string') || (typeOf === 'number') || (typeOf === 'boolean') || (typeOf === 'undefined');
         }
         Utils.isPrimitive = isPrimitive;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
@@ -19,7 +15,8 @@ var Mercury;
 
 var mw = {
     loader: {
-        state: function () { }
+        state: function () {
+        }
     }
 }, Wikia = Wikia || {};
 
@@ -39,8 +36,7 @@ var Mercury;
                 parts = str.split('.');
             }
             if (parts.length === 1 && !ns) {
-                throw new Error('Uneccessary assignment, please specify more ' +
-                    'items in arg1 or a namespace in arg2');
+                throw new Error('Uneccessary assignment, please specify more ' + 'items in arg1 or a namespace in arg2');
             }
             if (!ns) {
                 ns = window;
@@ -233,9 +229,7 @@ var Mercury;
             }
             if (urlParams.query) {
                 url += '?';
-                url += Object.keys(urlParams.query).map(function (key) {
-                    return (encodeURIComponent(key) + "=" + encodeURIComponent(urlParams.query[key]));
-                }).join('&');
+                url += Object.keys(urlParams.query).map(function (key) { return ("" + encodeURIComponent(key) + "=" + encodeURIComponent(urlParams.query[key])); }).join('&');
             }
             return url;
         }

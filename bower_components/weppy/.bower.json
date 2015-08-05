@@ -1,0 +1,25 @@
+{
+  "name": "weppy",
+  "version": "0.9.2",
+  "main": [
+    "/dist/weppy.amd.js",
+    "/dist/weppy.cjs.js",
+    "/dist/weppy.js",
+    "/dist/weppy..d.ts"
+  ],
+  "ignore": [
+    "tests"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Wikia/weppy",
+  "_release": "0.9.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.2",
+    "commit": "d27bdf06d7ecca1530cd2c0b20053e76a1b55e4c"
+  },
+  "_source": "git://github.com/Wikia/weppy.git",
+  "_target": "~0.9.2",
+  "_originalSource": "Wikia/weppy",
+  "_direct": true
+}

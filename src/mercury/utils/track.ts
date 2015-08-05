@@ -1,4 +1,3 @@
-/// <reference path="../../../../typings/ember/ember.d.ts" />
 /// <reference path="../modules/Trackers/Internal.ts" />
 /// <reference path="../modules/Trackers/UniversalAnalytics.ts" />
 

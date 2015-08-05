@@ -1,5 +1,5 @@
 /// <reference path="./BaseTracker.ts" />
-/// <reference path="../../../../vendor/weppy/weppy.d.ts" />
+/// <reference path="../../../../bower_components/weppy/weppy.d.ts" />
 /// <reference path="../../../baseline/mercury/utils/state.ts" />
 'use strict';
 

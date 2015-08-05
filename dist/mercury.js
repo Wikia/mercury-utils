@@ -26,7 +26,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../../../typings/google.analytics/ga.d.ts" />
+/// <reference path="../../../../typings/google.analytics/ga.d.ts" />
 /// <reference path="../../../baseline/mercury.ts" />
 /// <reference path="../../../baseline/mercury.d.ts" />
 var Mercury;
@@ -49,9 +49,15 @@ var Mercury;
                     // Use one of the domains below. If none matches, the tag will fall back to
                     // the default which is 'auto', probably good enough in edge cases.
                     var domain = [
-                        'wikia.com', 'ffxiclopedia.org', 'jedipedia.de',
-                        'marveldatabase.com', 'memory-alpha.org', 'uncyclopedia.org',
-                        'websitewiki.de', 'wowwiki.com', 'yoyowiki.org'
+                        'wikia.com',
+                        'ffxiclopedia.org',
+                        'jedipedia.de',
+                        'marveldatabase.com',
+                        'memory-alpha.org',
+                        'uncyclopedia.org',
+                        'websitewiki.de',
+                        'wowwiki.com',
+                        'yoyowiki.org'
                     ].filter(function (domain) { return document.location.hostname.indexOf(domain) > -1; })[0];
                     this.accounts = M.prop('tracking.ua');
                     // Primary account
@@ -118,9 +124,7 @@ var Mercury;
                     if (domain) {
                         ga(prefix + 'linker:autoLink', domain);
                     }
-                    UniversalAnalytics.dimensions.forEach(function (dimension, idx) {
-                        return ga(prefix + "set", "dimension" + idx, _this.getDimension(idx));
-                    });
+                    UniversalAnalytics.dimensions.forEach(function (dimension, idx) { return ga("" + prefix + "set", "dimension" + idx, _this.getDimension(idx)); });
                     this.tracked.push(this.accounts[trackerName]);
                 };
                 /**
@@ -172,8 +176,8 @@ var Mercury;
                     }
                     this.tracked.forEach(function (account) {
                         var prefix = account.prefix ? account.prefix + '.' : '';
-                        ga(prefix + "set", 'dimension8', pageType, 3);
-                        ga(prefix + "send", 'pageview');
+                        ga("" + prefix + "set", 'dimension8', pageType, 3);
+                        ga("" + prefix + "send", 'pageview');
                     });
                 };
                 UniversalAnalytics.dimensions = [];
@@ -460,7 +464,6 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../../typings/ember/ember.d.ts" />
 /// <reference path="../modules/Trackers/Internal.ts" />
 /// <reference path="../modules/Trackers/UniversalAnalytics.ts" />
 var Mercury;
@@ -676,7 +679,8 @@ var Mercury;
                  * Intentionally a no-op, documentation that this hook is implemented
                  * and to not error when called by loadPlayer*
                  */
-                BasePlayer.prototype.playerDidLoad = function () { };
+                BasePlayer.prototype.playerDidLoad = function () {
+                };
                 /**
                  * Sets CSS width and height for the video container.
                  * Container selector is can be overriden by the inheriting class
@@ -922,14 +926,14 @@ var Mercury;
                 var timeDiff = Math.floor((to.getTime() - from.getTime()) / 1000);
                 if (timeDiff == 0) {
                     return {
-                        type: Interval.Now,
+                        type: 0 /* Now */,
                         value: 0
                     };
                 }
                 // seconds
                 if (timeDiff < 60) {
                     return {
-                        type: Interval.Second,
+                        type: 1 /* Second */,
                         value: timeDiff
                     };
                 }
@@ -937,7 +941,7 @@ var Mercury;
                 timeDiff = Math.floor(timeDiff / 60);
                 if (timeDiff < 60) {
                     return {
-                        type: Interval.Minute,
+                        type: 2 /* Minute */,
                         value: timeDiff
                     };
                 }
@@ -945,7 +949,7 @@ var Mercury;
                 timeDiff = Math.floor(timeDiff / 60);
                 if (timeDiff < 24) {
                     return {
-                        type: Interval.Hour,
+                        type: 3 /* Hour */,
                         value: timeDiff
                     };
                 }
@@ -953,7 +957,7 @@ var Mercury;
                 timeDiff = Math.floor(timeDiff / 24);
                 if (timeDiff < 30) {
                     return {
-                        type: Interval.Day,
+                        type: 4 /* Day */,
                         value: timeDiff
                     };
                 }
@@ -961,14 +965,14 @@ var Mercury;
                 timeDiff = Math.floor(timeDiff / 30);
                 if (timeDiff < 12) {
                     return {
-                        type: Interval.Month,
+                        type: 5 /* Month */,
                         value: timeDiff
                     };
                 }
                 // years
                 timeDiff = Math.floor(timeDiff / 12);
                 return {
-                    type: Interval.Year,
+                    type: 6 /* Year */,
                     value: timeDiff
                 };
             }
@@ -995,16 +999,12 @@ var Mercury;
              */
             function normalizeToUnderscore(title) {
                 if (title === void 0) { title = ''; }
-                return title
-                    .replace(/\s/g, '_')
-                    .replace(/_+/g, '_');
+                return title.replace(/\s/g, '_').replace(/_+/g, '_');
             }
             String.normalizeToUnderscore = normalizeToUnderscore;
             function normalizeToWhitespace(str) {
                 if (str === void 0) { str = ''; }
-                return str
-                    .replace(/_/g, ' ')
-                    .replace(/\s+/g, ' ');
+                return str.replace(/_/g, ' ').replace(/\s+/g, ' ');
             }
             String.normalizeToWhitespace = normalizeToWhitespace;
         })(String = Utils.String || (Utils.String = {}));
@@ -1045,10 +1045,10 @@ var Mercury;
 })(Mercury || (Mercury = {}));
 
 /// <reference path="./BaseTracker.ts" />
-/// <reference path="../../../../vendor/weppy/weppy.d.ts" />
+/// <reference path="../../../../bower_components/weppy/weppy.d.ts" />
 /// <reference path="../../../baseline/mercury/utils/state.ts" />
 'use strict';
-var __extends = (this && this.__extends) || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
@@ -1202,8 +1202,7 @@ var Mercury;
                 var optimizely = window.optimizely, activeExperiments = this.getActiveExperimentsList(), dimension, experimentName, variationName;
                 if (activeExperiments) {
                     activeExperiments.forEach(function (experimentId) {
-                        if (optimizely.allExperiments.hasOwnProperty(experimentId) &&
-                            typeof optimizely.allExperiments[experimentId].universal_analytics === 'object') {
+                        if (optimizely.allExperiments.hasOwnProperty(experimentId) && typeof optimizely.allExperiments[experimentId].universal_analytics === 'object') {
                             dimension = optimizely.allExperiments[experimentId].universal_analytics.slot;
                             experimentName = optimizely.allExperiments[experimentId].name;
                             variationName = optimizely.variationNamesMap[experimentId];
@@ -1232,8 +1231,7 @@ var Mercury;
              */
             function getExperimentVariationNumberBySingleId(experimentId) {
                 var optimizely = window.optimizely;
-                return (optimizely && optimizely.variationMap && typeof optimizely.variationMap[experimentId] === 'number') ?
-                    optimizely.variationMap[experimentId] : null;
+                return (optimizely && optimizely.variationMap && typeof optimizely.variationMap[experimentId] === 'number') ? optimizely.variationMap[experimentId] : null;
             }
             VariantTesting.getExperimentVariationNumberBySingleId = getExperimentVariationNumberBySingleId;
             /**
@@ -1275,7 +1273,7 @@ var Mercury;
 
 /// <reference path="./BaseTracker.ts" />
 'use strict';
-var __extends = (this && this.__extends) || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
@@ -1314,10 +1312,9 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../../../typings/ember/ember.d.ts" />
 /// <reference path="./BaseTracker.ts" />
 'use strict';
-var __extends = (this && this.__extends) || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
@@ -1347,9 +1344,9 @@ var Mercury;
                     //without this quantserve does not want to track 2+ page view
                     window.__qc = null;
                     window._qevents = [{
-                            qacct: M.prop('tracking.quantserve'),
-                            labels: quantcastLabels.join(',')
-                        }];
+                        qacct: M.prop('tracking.quantserve'),
+                        labels: quantcastLabels.join(',')
+                    }];
                     this.appendScript();
                 };
                 return Quantserve;
@@ -1363,7 +1360,7 @@ var Mercury;
 /// <reference path="../../../baseline/mercury.d.ts" />
 /// <reference path="../../utils/calculation.ts" />
 /// <reference path="./Base.ts" />
-var __extends = (this && this.__extends) || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
@@ -1392,7 +1389,9 @@ var Mercury;
                 OoyalaPlayer.prototype.setupPlayer = function () {
                     var _this = this;
                     this.params = $.extend(this.params, {
-                        onCreate: function () { return _this.onCreate.apply(_this, arguments); }
+                        onCreate: function () {
+                            return _this.onCreate.apply(_this, arguments);
+                        }
                     });
                     if (!window.OO) {
                         this.loadPlayer();
@@ -1439,7 +1438,7 @@ var Mercury;
 
 /// <reference path="../../../baseline/mercury.d.ts" />
 /// <reference path="./Base.ts" />
-var __extends = (this && this.__extends) || function (d, b) {
+var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     __.prototype = b.prototype;
@@ -1464,8 +1463,12 @@ var Mercury;
                 YouTubePlayer.prototype.bindPlayerEvents = function () {
                     var _this = this;
                     this.params.events = {
-                        'onReady': function () { return _this.onPlayerReady.apply(_this, arguments); },
-                        'onStateChange': function () { return _this.onPlayerStateChange.apply(_this, arguments); }
+                        'onReady': function () {
+                            return _this.onPlayerReady.apply(_this, arguments);
+                        },
+                        'onStateChange': function () {
+                            return _this.onPlayerStateChange.apply(_this, arguments);
+                        }
                     };
                     if (window.YT) {
                         this.createPlayer();

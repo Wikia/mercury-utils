@@ -1,4 +1,3 @@
-/// <reference path="../../../../../typings/ember/ember.d.ts" />
 /// <reference path="./BaseTracker.ts" />
 'use strict';
 
