@@ -1150,6 +1150,8 @@ var Mercury;
             // Initializes Weppy context
             getInstance();
             Weppy.sendPagePerformance();
+            // used for automation test
+            M.prop('pagePerformanceSent', true);
         }
         Utils.sendPagePerformance = sendPagePerformance;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
