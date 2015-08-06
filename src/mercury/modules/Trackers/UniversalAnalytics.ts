@@ -1,6 +1,6 @@
 /// <reference path="../../../../typings/google.analytics/ga.d.ts" />
 /// <reference path="../../../baseline/mercury.ts" />
-/// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="./trackers.d.ts" />
 
 interface TrackerOptions {

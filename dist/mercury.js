@@ -28,7 +28,7 @@ var Mercury;
 
 /// <reference path="../../../../typings/google.analytics/ga.d.ts" />
 /// <reference path="../../../baseline/mercury.ts" />
-/// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="./trackers.d.ts" />
 var Mercury;
 (function (Mercury) {
@@ -189,7 +189,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 'use strict';
 /**
 * @description This module is an alias for whatever script loader implementation
@@ -212,7 +212,7 @@ var Mercury;
 })(Mercury || (Mercury = {}));
 
 /// <reference path='../../../typings/jquery/jquery.d.ts' />
-/// <reference path='../../baseline/mercury.d.ts' />
+/// <reference path='../../../typings/mercury-utils/baseline.d.ts' />
 /// <reference path='./Trackers/Krux.ts' />
 /// <reference path='./Trackers/UniversalAnalytics.ts' />
 /// <reference path='../../baseline/mercury.ts' />
@@ -369,7 +369,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 'use strict';
 var Mercury;
 (function (Mercury) {
@@ -604,7 +604,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /**
  * @define calculation
  *
@@ -646,7 +646,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="../../utils/track.ts" />
 /// <reference path="../../utils/load.ts" />
 /// <reference path="../../utils/calculation.ts" />
@@ -728,7 +728,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="./VideoPlayers/Base.ts" />
 'use strict';
 var Mercury;
@@ -772,7 +772,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /**
  * @define articlelink
  *
@@ -862,7 +862,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /**
  * @define browser
  */
@@ -892,7 +892,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /**
  * @desc Helper functions to deal with Date and time
  */
@@ -982,7 +982,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 'use strict';
 var Mercury;
 (function (Mercury) {
@@ -1012,7 +1012,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 'use strict';
 /**
  * Base class for trackers that have to append their scripts like Comscore or Quantserve
@@ -1124,7 +1124,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="../modules/Trackers/Perf.ts" />
 'use strict';
 /**
@@ -1157,7 +1157,7 @@ var Mercury;
     })(Utils = Mercury.Utils || (Mercury.Utils = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /**
  * @define variantTesting
  *
@@ -1360,7 +1360,7 @@ var Mercury;
 })(Mercury || (Mercury = {}));
 
 /// <reference path="../../../../typings/jquery/jquery.d.ts" />
-/// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="../../utils/calculation.ts" />
 /// <reference path="./Base.ts" />
 var __extends = this.__extends || function (d, b) {
@@ -1439,7 +1439,7 @@ var Mercury;
     })(Modules = Mercury.Modules || (Mercury.Modules = {}));
 })(Mercury || (Mercury = {}));
 
-/// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="./Base.ts" />
 var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];

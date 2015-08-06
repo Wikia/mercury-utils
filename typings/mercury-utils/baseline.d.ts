@@ -16,6 +16,8 @@ declare module Mercury {
 	}
 }
 
+declare var M: typeof Mercury.Utils;
+
 interface Location {
 	origin: string;
 }

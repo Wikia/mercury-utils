@@ -1,4 +1,4 @@
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 
 interface TimeAgoResult {
 	type: Mercury.Utils.DateTime.Interval

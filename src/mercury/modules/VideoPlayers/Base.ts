@@ -1,4 +1,4 @@
-/// <reference path="../../../baseline/mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="../../utils/track.ts" />
 /// <reference path="../../utils/load.ts" />
 /// <reference path="../../utils/calculation.ts" />

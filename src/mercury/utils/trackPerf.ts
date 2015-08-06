@@ -1,4 +1,4 @@
-/// <reference path="../../baseline/mercury.d.ts" />
+/// <reference path="../../../typings/mercury-utils/baseline.d.ts" />
 /// <reference path="../modules/Trackers/Perf.ts" />
 'use strict';
 

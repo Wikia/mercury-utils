@@ -170,7 +170,7 @@ var Mercury;
 var M = Mercury.Utils;
 
 /// <reference path='../../mercury.ts' />
-/// <reference path="../../mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 var Mercury;
 (function (Mercury) {
     var Utils;

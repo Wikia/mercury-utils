@@ -1,5 +1,5 @@
 /// <reference path='../../mercury.ts' />
-/// <reference path="../../mercury.d.ts" />
+/// <reference path="../../../../typings/mercury-utils/baseline.d.ts" />
 interface UrlParams {
 	namespace?: string;
 	path?: string;

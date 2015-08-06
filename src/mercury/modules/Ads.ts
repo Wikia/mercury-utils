@@ -1,5 +1,5 @@
 /// <reference path='../../../typings/jquery/jquery.d.ts' />
-/// <reference path='../../baseline/mercury.d.ts' />
+/// <reference path='../../../typings/mercury-utils/baseline.d.ts' />
 /// <reference path='./Trackers/Krux.ts' />
 /// <reference path='./Trackers/UniversalAnalytics.ts' />
 /// <reference path='../../baseline/mercury.ts' />
